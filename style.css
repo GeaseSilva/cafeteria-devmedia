@@ -1,10 +1,10 @@
 :root {
---cor-primaria:  #c4a47c;
---cor-fundo: #fff;
---cor-preto: #151515;
---cor-barra: #604829;
---cor-paragrafo: #666;
---cor-cinza: #ACACAC;
+    --cor-primaria: #c4a47c;
+    --cor-fundo: #fff;
+    --cor-preto: #151515;
+    --cor-barra: #604829;
+    --cor-paragrafo: #666;
+    --cor-cinza: #ACACAC;
 }
 
 * {
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background-color: var(--cor-fundo);    
+    background-color: var(--cor-fundo);
 }
 
 
@@ -45,6 +45,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+.topo ul {
+    display: flex;
+    list-style: none;
 }
 
 .topo a {
@@ -87,10 +92,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: var(--cor-barra);
     color: var(--cor-fundo);
-    font-family: 'Fraunces' ;
+    font-family: 'Fraunces';
     font-size: 24px;
     padding: 10px 30px;
     border-radius: 1px;
@@ -102,14 +107,14 @@ body {
     top: 50%;
     left: 50%;
     color: var(--cor-fundo);
-    font-family: 'Fraunces' ;
+    font-family: 'Fraunces';
     font-size: 60px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 
-.secao-informacoes{
+.secao-informacoes {
     padding: 80px 80px;
     font-size: 16px;
     line-height: 27px;
@@ -143,11 +148,11 @@ body {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    margin-top:20px ;
+    margin-top: 20px;
     transform: translate(-50%);
     background-color: var(--cor-barra);
     color: var(--cor-fundo);
-    font-family: 'Fraunces' ;
+    font-family: 'Fraunces';
     font-size: 18px;
     font-weight: 100;
     line-height: 35px;
@@ -164,7 +169,7 @@ body {
     background-attachment: fixed;
     font-family: 'oswald';
     padding: 100px 100px;
-    
+
 }
 
 .secao-horarios h2 {
@@ -178,7 +183,7 @@ body {
     padding-top: 110px;
 }
 
-.horarios li { 
+.horarios li {
     position: relative;
     color: var(--cor-fundo);
 }
@@ -187,7 +192,7 @@ body {
     font-size: 22px;
 }
 
-.horarios li div { 
+.horarios li div {
     width: 60%;
     height: 1px;
     position: absolute;
@@ -198,7 +203,7 @@ body {
     background-color: #acacac
 }
 
-.horarios li p { 
+.horarios li p {
     position: absolute;
     top: 0;
     right: 0;
@@ -234,11 +239,11 @@ body {
 
 /* REPONSIVO */
 
-@media only screen and (min-width: 320px) and (max-width: 450px) {
+@media only screen and (min-width: 451px) and (max-width: 768px) {
     .topo {
         width: 100%;
         display: flex;
-        
+
     }
 
     .secao-banner {
@@ -254,7 +259,7 @@ body {
     }
 
     .secao-banner h2 {
-         width: 95%;
+        width: 95%;
         font-size: 19px;
         text-align: center;
     }
@@ -286,7 +291,6 @@ body {
 
     .secao-horarios {
         width: 100%;
-        border: 1px solid red;
         padding-top: 100px;
         padding-left: 0;
         padding-right: 0;
@@ -298,15 +302,14 @@ body {
 
     .horarios {
         width: 90%;
-        border: 1px solid red;
         padding: 20px 25px;
-        
+
     }
 
-    .horarios li div { 
-    width: 20%;
-    margin-top: 40px;
-    margin-left: 110px;
+    .horarios li div {
+        width: 20%;
+        margin-top: 40px;
+        margin-left: 110px;
     }
 
     .rodape img {
@@ -317,16 +320,111 @@ body {
 
 
     .topo nav {
-    width: 100%;
-    display: flex;
-  }
+        width: 100%;
+        display: flex;
+    }
 
-  nav ul {
-    flex-direction: column;
-  }
+    nav ul {
+        flex-direction: column;
+    }
 
-  nav li {
-    margin-right: 0;
-  }
+    nav li {
+        margin-right: 0;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 450px) {
+    .topo {
+        width: 100%;
+        display: flex;
+
+    }
+
+    .secao-banner {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    .secao-banner h1 {
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .secao-banner h2 {
+        width: 95%;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .secao-informacoes {
+        width: 100%;
+        font-size: 18px;
+        padding: 40px 25px;
+        text-align: justify;
+        line-height: 22px;
+    }
+
+    .secao-informacoes h3 {
+        width: 100%;
+        font-size: 25px;
+        margin-bottom: 40px;
+        line-height: 35px;
+    }
+
+    .contato iframe {
+        width: 90%;
+    }
+
+    .box-contato {
+        width: 90%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .secao-horarios {
+        width: 100%;
+        padding-top: 100px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .secao-horarios h2 {
+        margin-bottom: 20px;
+    }
+
+    .horarios {
+        width: 90%;
+        padding: 20px 25px;
+
+    }
+
+    .horarios li div {
+        width: 20%;
+        margin-top: 40px;
+        margin-left: 110px;
+    }
+
+    .rodape img {
+        left: 50%;
+        bottom: 60%;
+        transform: translate(-60%, -50%);
+    }
+
+
+    .topo nav {
+        width: 100%;
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-right: 0;
+    }
 
 }
